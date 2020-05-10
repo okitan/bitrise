@@ -95,7 +95,7 @@ export class ActivityApi {
      * @param next Slug of the first activity event in the response
      * @param limit Max number of elements per page (default: 50)
      */
-    public async activityList (next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ActivityEventListResponseModel;  }> {
+    public async activityList (next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ActivityEventListResponseModel;  }> {
         const localVarPath = this.basePath + '/me/activities';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -148,7 +148,7 @@ export class ActivityApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ActivityEventListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ActivityEventListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

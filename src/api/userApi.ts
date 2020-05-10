@@ -94,7 +94,7 @@ export class UserApi {
      * Get the subscription of the user: the current plan, any pending plans, and the duration of a trial period if applicable
      * @summary The subscription plan of the user
      */
-    public async userPlan (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0UserPlanRespModel;  }> {
+    public async userPlan (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0UserPlanRespModel;  }> {
         const localVarPath = this.basePath + '/me/plan';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -139,7 +139,7 @@ export class UserApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0UserPlanRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0UserPlanRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -159,7 +159,7 @@ export class UserApi {
      * Shows the authenticated users profile data
      * @summary Get your profile data
      */
-    public async userProfile (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0UserProfileRespModel;  }> {
+    public async userProfile (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0UserProfileRespModel;  }> {
         const localVarPath = this.basePath + '/me';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -204,7 +204,7 @@ export class UserApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0UserProfileRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0UserProfileRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -225,7 +225,7 @@ export class UserApi {
      * @summary Get a specific user
      * @param userSlug User slug
      */
-    public async userShow (userSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0UserProfileRespModel;  }> {
+    public async userShow (userSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0UserProfileRespModel;  }> {
         const localVarPath = this.basePath + '/users/{user-slug}'
             .replace('{' + 'user-slug' + '}', encodeURIComponent(String(userSlug)));
         let localVarQueryParameters: any = {};
@@ -276,7 +276,7 @@ export class UserApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0UserProfileRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0UserProfileRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

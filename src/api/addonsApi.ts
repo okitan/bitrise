@@ -99,7 +99,7 @@ export class AddonsApi {
      * @summary Get list of the addons for apps
      * @param appSlug App slug
      */
-    public async addonListByApp (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppAddOnsListResponseModel;  }> {
+    public async addonListByApp (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppAddOnsListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/addons'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -153,7 +153,7 @@ export class AddonsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppAddOnsListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppAddOnsListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -174,7 +174,7 @@ export class AddonsApi {
      * @summary Get list of the addons for organization
      * @param organizationSlug Organization slug
      */
-    public async addonListByOrganization (organizationSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0OwnerAddOnsListResponseModel;  }> {
+    public async addonListByOrganization (organizationSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0OwnerAddOnsListResponseModel;  }> {
         const localVarPath = this.basePath + '/organizations/{organization-slug}/addons'
             .replace('{' + 'organization-slug' + '}', encodeURIComponent(String(organizationSlug)));
         let localVarQueryParameters: any = {};
@@ -225,7 +225,7 @@ export class AddonsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0OwnerAddOnsListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0OwnerAddOnsListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -246,7 +246,7 @@ export class AddonsApi {
      * @summary Get list of the addons for user
      * @param userSlug User slug
      */
-    public async addonListByUser (userSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0OwnerAddOnsListResponseModel;  }> {
+    public async addonListByUser (userSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0OwnerAddOnsListResponseModel;  }> {
         const localVarPath = this.basePath + '/users/{user-slug}/addons'
             .replace('{' + 'user-slug' + '}', encodeURIComponent(String(userSlug)));
         let localVarQueryParameters: any = {};
@@ -297,7 +297,7 @@ export class AddonsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0OwnerAddOnsListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0OwnerAddOnsListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -317,7 +317,7 @@ export class AddonsApi {
      * List all the available Bitrise addons
      * @summary Get list of available Bitrise addons
      */
-    public async addonsList (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AddonsListResponseModel;  }> {
+    public async addonsList (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AddonsListResponseModel;  }> {
         const localVarPath = this.basePath + '/addons';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -362,7 +362,7 @@ export class AddonsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AddonsListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AddonsListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -383,7 +383,7 @@ export class AddonsApi {
      * @summary Get a specific Bitrise addon
      * @param addonId Addon ID
      */
-    public async addonsShow (addonId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AddonsShowResponseModel;  }> {
+    public async addonsShow (addonId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AddonsShowResponseModel;  }> {
         const localVarPath = this.basePath + '/addons/{addon-id}'
             .replace('{' + 'addon-id' + '}', encodeURIComponent(String(addonId)));
         let localVarQueryParameters: any = {};
@@ -434,7 +434,7 @@ export class AddonsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AddonsShowResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AddonsShowResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

@@ -98,7 +98,7 @@ export class BuildRequestApi {
      * @summary List the open build requests for an app
      * @param appSlug App slug
      */
-    public async buildRequestList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildRequestListResponseModel;  }> {
+    public async buildRequestList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildRequestListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/build-requests'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -152,7 +152,7 @@ export class BuildRequestApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildRequestListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildRequestListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -175,7 +175,7 @@ export class BuildRequestApi {
      * @param buildRequestSlug Build request slug
      * @param buildRequest Build request parameters
      */
-    public async buildRequestUpdate (appSlug: string, buildRequestSlug: string, buildRequest: V0BuildRequestUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildRequestUpdateResponseModel;  }> {
+    public async buildRequestUpdate (appSlug: string, buildRequestSlug: string, buildRequest: V0BuildRequestUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildRequestUpdateResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/build-requests/{build-request-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-request-slug' + '}', encodeURIComponent(String(buildRequestSlug)));
@@ -238,7 +238,7 @@ export class BuildRequestApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildRequestUpdateResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildRequestUpdateResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

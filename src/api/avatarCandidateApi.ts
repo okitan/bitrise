@@ -99,7 +99,7 @@ export class AvatarCandidateApi {
      * @param appSlug App slug
      * @param avatarCandidate Avatar candidate parameters
      */
-    public async avatarCandidateCreate (appSlug: string, avatarCandidate: Array<V0AvatarCandidateCreateParams>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<V0AvatarCandidateCreateResponseItem>;  }> {
+    public async avatarCandidateCreate (appSlug: string, avatarCandidate: Array<V0AvatarCandidateCreateParams>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<V0AvatarCandidateCreateResponseItem>;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/avatar-candidates'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -156,7 +156,7 @@ export class AvatarCandidateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: Array<V0AvatarCandidateCreateResponseItem>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<V0AvatarCandidateCreateResponseItem>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -177,7 +177,7 @@ export class AvatarCandidateApi {
      * @summary Get list of the avatar candidates
      * @param appSlug App slug
      */
-    public async avatarCandidateList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0FindAvatarCandidateResponse;  }> {
+    public async avatarCandidateList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0FindAvatarCandidateResponse;  }> {
         const localVarPath = this.basePath + '/v0.1/apps/{app-slug}/avatar-candidates'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -228,7 +228,7 @@ export class AvatarCandidateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0FindAvatarCandidateResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0FindAvatarCandidateResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -251,7 +251,7 @@ export class AvatarCandidateApi {
      * @param avatarSlug Avatar candidate slug
      * @param avatarPromoteParams Avatar promote parameters
      */
-    public async avatarCandidatePromote (appSlug: string, avatarSlug: string, avatarPromoteParams: V0AvatarPromoteParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AvatarPromoteResponseModel;  }> {
+    public async avatarCandidatePromote (appSlug: string, avatarSlug: string, avatarPromoteParams: V0AvatarPromoteParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AvatarPromoteResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/avatar-candidates/{avatar-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'avatar-slug' + '}', encodeURIComponent(String(avatarSlug)));
@@ -314,7 +314,7 @@ export class AvatarCandidateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AvatarPromoteResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AvatarPromoteResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

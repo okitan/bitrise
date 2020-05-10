@@ -100,7 +100,7 @@ export class ProvisioningProfileApi {
      * @param appSlug App slug
      * @param provisioningProfileSlug Provisioning profile slug
      */
-    public async provisioningProfileConfirm (appSlug: string, provisioningProfileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }> {
+    public async provisioningProfileConfirm (appSlug: string, provisioningProfileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}/uploaded'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'provisioning-profile-slug' + '}', encodeURIComponent(String(provisioningProfileSlug)));
@@ -157,7 +157,7 @@ export class ProvisioningProfileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -179,7 +179,7 @@ export class ProvisioningProfileApi {
      * @param appSlug App slug
      * @param provisioningProfile Provisioning profile parameters such as file name and file size
      */
-    public async provisioningProfileCreate (appSlug: string, provisioningProfile: V0ProvisionProfileUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }> {
+    public async provisioningProfileCreate (appSlug: string, provisioningProfile: V0ProvisionProfileUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/provisioning-profiles'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -236,7 +236,7 @@ export class ProvisioningProfileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -258,7 +258,7 @@ export class ProvisioningProfileApi {
      * @param appSlug App slug
      * @param provisioningProfileSlug Provisioning profile slug
      */
-    public async provisioningProfileDelete (appSlug: string, provisioningProfileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }> {
+    public async provisioningProfileDelete (appSlug: string, provisioningProfileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'provisioning-profile-slug' + '}', encodeURIComponent(String(provisioningProfileSlug)));
@@ -315,7 +315,7 @@ export class ProvisioningProfileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -338,7 +338,7 @@ export class ProvisioningProfileApi {
      * @param next Slug of the first provisioning profile in the response
      * @param limit Max number of elements per page (default: 50)
      */
-    public async provisioningProfileList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProvisionProfileListResponseModel;  }> {
+    public async provisioningProfileList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/provisioning-profiles'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -400,7 +400,7 @@ export class ProvisioningProfileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProvisionProfileListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -422,7 +422,7 @@ export class ProvisioningProfileApi {
      * @param appSlug App slug
      * @param provisioningProfileSlug Provisioning profile slug
      */
-    public async provisioningProfileShow (appSlug: string, provisioningProfileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }> {
+    public async provisioningProfileShow (appSlug: string, provisioningProfileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'provisioning-profile-slug' + '}', encodeURIComponent(String(provisioningProfileSlug)));
@@ -479,7 +479,7 @@ export class ProvisioningProfileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -502,7 +502,7 @@ export class ProvisioningProfileApi {
      * @param provisioningProfileSlug Provisioning profile slug
      * @param provisioningProfile Provisioning profile parameters
      */
-    public async provisioningProfileUpdate (appSlug: string, provisioningProfileSlug: string, provisioningProfile: V0ProvProfileDocumentUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }> {
+    public async provisioningProfileUpdate (appSlug: string, provisioningProfileSlug: string, provisioningProfile: V0ProvProfileDocumentUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'provisioning-profile-slug' + '}', encodeURIComponent(String(provisioningProfileSlug)));
@@ -565,7 +565,7 @@ export class ProvisioningProfileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProvisionProfileResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

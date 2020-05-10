@@ -98,7 +98,7 @@ export class ApplicationApi {
      * @summary Get bitrise.yml of a specific app
      * @param appSlug App slug
      */
-    public async appConfigDatastoreShow (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: string;  }> {
+    public async appConfigDatastoreShow (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/bitrise.yml'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -152,7 +152,7 @@ export class ApplicationApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: string;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: string;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -175,7 +175,7 @@ export class ApplicationApi {
      * @param next Slug of the first app in the response
      * @param limit Max number of elements per page (default: 50)
      */
-    public async appList (sortBy?: 'last_build_at' | 'created_at', next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppListResponseModel;  }> {
+    public async appList (sortBy?: 'last_build_at' | 'created_at', next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -232,7 +232,7 @@ export class ApplicationApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -256,7 +256,7 @@ export class ApplicationApi {
      * @param next Slug of the first app in the response
      * @param limit Max number of elements per page (default: 50)
      */
-    public async appListByOrganization (orgSlug: string, sortBy?: 'last_build_at' | 'created_at', next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppListResponseModel;  }> {
+    public async appListByOrganization (orgSlug: string, sortBy?: 'last_build_at' | 'created_at', next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppListResponseModel;  }> {
         const localVarPath = this.basePath + '/organizations/{org-slug}/apps'
             .replace('{' + 'org-slug' + '}', encodeURIComponent(String(orgSlug)));
         let localVarQueryParameters: any = {};
@@ -319,7 +319,7 @@ export class ApplicationApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -343,7 +343,7 @@ export class ApplicationApi {
      * @param next Slug of the first app in the response
      * @param limit Max number of elements per page (default: 50)
      */
-    public async appListByUser (userSlug: string, sortBy?: 'last_build_at' | 'created_at', next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppListResponseModel;  }> {
+    public async appListByUser (userSlug: string, sortBy?: 'last_build_at' | 'created_at', next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppListResponseModel;  }> {
         const localVarPath = this.basePath + '/users/{user-slug}/apps'
             .replace('{' + 'user-slug' + '}', encodeURIComponent(String(userSlug)));
         let localVarQueryParameters: any = {};
@@ -406,7 +406,7 @@ export class ApplicationApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -427,7 +427,7 @@ export class ApplicationApi {
      * @summary Get a specific app
      * @param appSlug App slug
      */
-    public async appShow (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppShowResponseModel;  }> {
+    public async appShow (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppShowResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -481,7 +481,7 @@ export class ApplicationApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppShowResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppShowResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -502,7 +502,7 @@ export class ApplicationApi {
      * @summary List the branches of an app\'s repository
      * @param appSlug App slug
      */
-    public async branchList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BranchListResponseModel;  }> {
+    public async branchList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BranchListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/branches'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -556,7 +556,7 @@ export class ApplicationApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BranchListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BranchListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

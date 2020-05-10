@@ -98,7 +98,7 @@ export class WebhookDeliveryItemApi {
      * @param next Slug of the first delivery item in the response
      * @param limit Max number of elements per page (default: 50)
      */
-    public async webhookDeliveryItemList (appSlug: string, appWebhookSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0WebhookDeliveryItemShowResponseModel;  }> {
+    public async webhookDeliveryItemList (appSlug: string, appWebhookSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0WebhookDeliveryItemShowResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}/delivery-items'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'app-webhook-slug' + '}', encodeURIComponent(String(appWebhookSlug)));
@@ -163,7 +163,7 @@ export class WebhookDeliveryItemApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0WebhookDeliveryItemShowResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0WebhookDeliveryItemShowResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -186,7 +186,7 @@ export class WebhookDeliveryItemApi {
      * @param appWebhookSlug App webhook slug
      * @param webhookDeliveryItemSlug Webhook delivery item slug
      */
-    public async webhookDeliveryItemRedeliver (appSlug: string, appWebhookSlug: string, webhookDeliveryItemSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ServiceStandardErrorRespModel;  }> {
+    public async webhookDeliveryItemRedeliver (appSlug: string, appWebhookSlug: string, webhookDeliveryItemSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ServiceStandardErrorRespModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}/delivery-items/{webhook-delivery-item-slug}/redeliver'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'app-webhook-slug' + '}', encodeURIComponent(String(appWebhookSlug)))
@@ -249,7 +249,7 @@ export class WebhookDeliveryItemApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: ServiceStandardErrorRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: ServiceStandardErrorRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -272,7 +272,7 @@ export class WebhookDeliveryItemApi {
      * @param appWebhookSlug App webhook slug
      * @param webhookDeliveryItemSlug Webhook delivery item slug
      */
-    public async webhookDeliveryItemShow (appSlug: string, appWebhookSlug: string, webhookDeliveryItemSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0WebhookDeliveryItemResponseModel;  }> {
+    public async webhookDeliveryItemShow (appSlug: string, appWebhookSlug: string, webhookDeliveryItemSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0WebhookDeliveryItemResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}/delivery-items/{webhook-delivery-item-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'app-webhook-slug' + '}', encodeURIComponent(String(appWebhookSlug)))
@@ -335,7 +335,7 @@ export class WebhookDeliveryItemApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0WebhookDeliveryItemResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0WebhookDeliveryItemResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

@@ -101,7 +101,7 @@ export class BuildArtifactApi {
      * @param buildSlug Build slug
      * @param artifactSlug Artifact slug
      */
-    public async artifactDelete (appSlug: string, buildSlug: string, artifactSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ArtifactDeleteResponseModel;  }> {
+    public async artifactDelete (appSlug: string, buildSlug: string, artifactSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ArtifactDeleteResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-slug' + '}', encodeURIComponent(String(buildSlug)))
@@ -164,7 +164,7 @@ export class BuildArtifactApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ArtifactDeleteResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ArtifactDeleteResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -188,7 +188,7 @@ export class BuildArtifactApi {
      * @param next Slug of the first build artifact in the response
      * @param limit Max number of build artifacts per page is 50.
      */
-    public async artifactList (appSlug: string, buildSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ArtifactListResponseModel;  }> {
+    public async artifactList (appSlug: string, buildSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ArtifactListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds/{build-slug}/artifacts'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-slug' + '}', encodeURIComponent(String(buildSlug)));
@@ -256,7 +256,7 @@ export class BuildArtifactApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ArtifactListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ArtifactListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -279,7 +279,7 @@ export class BuildArtifactApi {
      * @param buildSlug Build slug
      * @param artifactSlug Artifact slug
      */
-    public async artifactShow (appSlug: string, buildSlug: string, artifactSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ArtifactShowResponseModel;  }> {
+    public async artifactShow (appSlug: string, buildSlug: string, artifactSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ArtifactShowResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-slug' + '}', encodeURIComponent(String(buildSlug)))
@@ -345,7 +345,7 @@ export class BuildArtifactApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ArtifactShowResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ArtifactShowResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -369,7 +369,7 @@ export class BuildArtifactApi {
      * @param artifactSlug Artifact slug
      * @param artifactParams Artifact parameters
      */
-    public async artifactUpdate (appSlug: string, buildSlug: string, artifactSlug: string, artifactParams: V0ArtifactUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ArtifactShowResponseModel;  }> {
+    public async artifactUpdate (appSlug: string, buildSlug: string, artifactSlug: string, artifactParams: V0ArtifactUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ArtifactShowResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-slug' + '}', encodeURIComponent(String(buildSlug)))
@@ -438,7 +438,7 @@ export class BuildArtifactApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ArtifactShowResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ArtifactShowResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

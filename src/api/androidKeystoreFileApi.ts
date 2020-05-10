@@ -99,7 +99,7 @@ export class AndroidKeystoreFileApi {
      * @param appSlug App slug
      * @param androidKeystoreFile Android keystore file parameters
      */
-    public async androidKeystoreFileCreate (appSlug: string, androidKeystoreFile: V0AndroidKeystoreFileUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }> {
+    public async androidKeystoreFileCreate (appSlug: string, androidKeystoreFile: V0AndroidKeystoreFileUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/android-keystore-files'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -156,7 +156,7 @@ export class AndroidKeystoreFileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -179,7 +179,7 @@ export class AndroidKeystoreFileApi {
      * @param next Slug of the first android keystore file in the response
      * @param limit Max number of build certificates per page is 50.
      */
-    public async androidKeystoreFileList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageListResponseModel;  }> {
+    public async androidKeystoreFileList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/android-keystore-files'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -241,7 +241,7 @@ export class AndroidKeystoreFileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

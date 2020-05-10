@@ -96,7 +96,7 @@ export class TestDevicesApi {
      * @summary List the test devices for an app
      * @param appSlug App slug
      */
-    public async testDeviceList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0TestDeviceListResponseModel;  }> {
+    public async testDeviceList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0TestDeviceListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/test-devices'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -150,7 +150,7 @@ export class TestDevicesApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0TestDeviceListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0TestDeviceListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

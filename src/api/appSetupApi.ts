@@ -102,7 +102,7 @@ export class AppSetupApi {
      * @param appSlug App slug
      * @param appConfig App config parameters
      */
-    public async appConfigCreate (appSlug: string, appConfig: V0AppConfigRequestParam, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: { [key: string]: string; };  }> {
+    public async appConfigCreate (appSlug: string, appConfig: V0AppConfigRequestParam, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: { [key: string]: string; };  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/bitrise.yml'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -159,7 +159,7 @@ export class AppSetupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: { [key: string]: string; };  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: { [key: string]: string; };  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -180,7 +180,7 @@ export class AppSetupApi {
      * @summary Add a new app
      * @param app App parameters
      */
-    public async appCreate (app: V0AppUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppRespModel;  }> {
+    public async appCreate (app: V0AppUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppRespModel;  }> {
         const localVarPath = this.basePath + '/apps/register';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -231,7 +231,7 @@ export class AppSetupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -253,7 +253,7 @@ export class AppSetupApi {
      * @param appSlug App slug
      * @param app App finish parameters
      */
-    public async appFinish (appSlug: string, app: V0AppFinishParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppFinishRespModel;  }> {
+    public async appFinish (appSlug: string, app: V0AppFinishParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppFinishRespModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/finish'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -310,7 +310,7 @@ export class AppSetupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppFinishRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppFinishRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -331,7 +331,7 @@ export class AppSetupApi {
      * @summary Register an incoming webhook for a specific application
      * @param appSlug App slug
      */
-    public async appWebhookCreate (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0WebhookRespModel;  }> {
+    public async appWebhookCreate (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0WebhookRespModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/register-webhook'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -382,7 +382,7 @@ export class AppSetupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0WebhookRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0WebhookRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -404,7 +404,7 @@ export class AppSetupApi {
      * @param appSlug App slug
      * @param sshKey SSH key parameters
      */
-    public async sshKeyCreate (appSlug: string, sshKey: V0SSHKeyUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0SSHKeyRespModel;  }> {
+    public async sshKeyCreate (appSlug: string, sshKey: V0SSHKeyUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0SSHKeyRespModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/register-ssh-key'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -461,7 +461,7 @@ export class AppSetupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0SSHKeyRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0SSHKeyRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

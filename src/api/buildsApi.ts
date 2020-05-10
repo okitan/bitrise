@@ -106,7 +106,7 @@ export class BuildsApi {
      * @param buildSlug Build slug
      * @param buildAbortParams Build abort parameters
      */
-    public async buildAbort (appSlug: string, buildSlug: string, buildAbortParams: V0BuildAbortParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildAbortResponseModel;  }> {
+    public async buildAbort (appSlug: string, buildSlug: string, buildAbortParams: V0BuildAbortParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildAbortResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds/{build-slug}/abort'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-slug' + '}', encodeURIComponent(String(buildSlug)));
@@ -172,7 +172,7 @@ export class BuildsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildAbortResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildAbortResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -194,7 +194,7 @@ export class BuildsApi {
      * @param appSlug App slug
      * @param buildSlug Build slug
      */
-    public async buildBitriseYmlShow (appSlug: string, buildSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: string;  }> {
+    public async buildBitriseYmlShow (appSlug: string, buildSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds/{build-slug}/bitrise.yml'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-slug' + '}', encodeURIComponent(String(buildSlug)));
@@ -254,7 +254,7 @@ export class BuildsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: string;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: string;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -287,7 +287,7 @@ export class BuildsApi {
      * @param next Slug of the first build in the response
      * @param limit Max number of elements per page (default: 50)
      */
-    public async buildList (appSlug: string, sortBy?: 'running_first' | 'created_at', branch?: string, workflow?: string, commitMessage?: string, triggerEventType?: string, pullRequestId?: number, buildNumber?: number, after?: number, before?: number, status?: number, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildListResponseModel;  }> {
+    public async buildList (appSlug: string, sortBy?: 'running_first' | 'created_at', branch?: string, workflow?: string, commitMessage?: string, triggerEventType?: string, pullRequestId?: number, buildNumber?: number, after?: number, before?: number, status?: number, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -389,7 +389,7 @@ export class BuildsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -414,7 +414,7 @@ export class BuildsApi {
      * @param next Slug of the first build in the response
      * @param limit Max number of elements per page (default: 50)
      */
-    public async buildListAll (ownerSlug?: string, isOnHold?: boolean, status?: number, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildListAllResponseModel;  }> {
+    public async buildListAll (ownerSlug?: string, isOnHold?: boolean, status?: number, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildListAllResponseModel;  }> {
         const localVarPath = this.basePath + '/builds';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -479,7 +479,7 @@ export class BuildsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildListAllResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildListAllResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -501,7 +501,7 @@ export class BuildsApi {
      * @param appSlug App slug
      * @param buildSlug Build slug
      */
-    public async buildLog (appSlug: string, buildSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildLogInfoResponseModel;  }> {
+    public async buildLog (appSlug: string, buildSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildLogInfoResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds/{build-slug}/log'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-slug' + '}', encodeURIComponent(String(buildSlug)));
@@ -561,7 +561,7 @@ export class BuildsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildLogInfoResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildLogInfoResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -583,7 +583,7 @@ export class BuildsApi {
      * @param appSlug App slug
      * @param buildSlug Build slug
      */
-    public async buildShow (appSlug: string, buildSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildShowResponseModel;  }> {
+    public async buildShow (appSlug: string, buildSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildShowResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds/{build-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-slug' + '}', encodeURIComponent(String(buildSlug)));
@@ -643,7 +643,7 @@ export class BuildsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildShowResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildShowResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -665,7 +665,7 @@ export class BuildsApi {
      * @param appSlug App slug
      * @param buildParams Build trigger parameters
      */
-    public async buildTrigger (appSlug: string, buildParams: V0BuildTriggerParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildTriggerRespModel;  }> {
+    public async buildTrigger (appSlug: string, buildParams: V0BuildTriggerParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildTriggerRespModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/builds'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -725,7 +725,7 @@ export class BuildsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildTriggerRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildTriggerRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -746,7 +746,7 @@ export class BuildsApi {
      * @summary List the workflows of an app
      * @param appSlug App slug
      */
-    public async buildWorkflowList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildWorkflowListResponseModel;  }> {
+    public async buildWorkflowList (appSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildWorkflowListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/build-workflows'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -800,7 +800,7 @@ export class BuildsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildWorkflowListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildWorkflowListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

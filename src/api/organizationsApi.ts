@@ -94,7 +94,7 @@ export class OrganizationsApi {
      * List all Bitrise organizations that the user is part of
      * @summary List the organizations that the user is part of
      */
-    public async orgList (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0OrganizationListRespModel;  }> {
+    public async orgList (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0OrganizationListRespModel;  }> {
         const localVarPath = this.basePath + '/organizations';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -139,7 +139,7 @@ export class OrganizationsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0OrganizationListRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0OrganizationListRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -160,7 +160,7 @@ export class OrganizationsApi {
      * @summary Get a specified organization.
      * @param orgSlug The organization slug
      */
-    public async orgShow (orgSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0OrganizationRespModel;  }> {
+    public async orgShow (orgSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0OrganizationRespModel;  }> {
         const localVarPath = this.basePath + '/organizations/{org-slug}'
             .replace('{' + 'org-slug' + '}', encodeURIComponent(String(orgSlug)));
         let localVarQueryParameters: any = {};
@@ -211,7 +211,7 @@ export class OrganizationsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0OrganizationRespModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0OrganizationRespModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

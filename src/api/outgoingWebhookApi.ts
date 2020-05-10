@@ -102,7 +102,7 @@ export class OutgoingWebhookApi {
      * @param appSlug App slug
      * @param appWebhookCreateParams App webhook creation params
      */
-    public async outgoingWebhookCreate (appSlug: string, appWebhookCreateParams: V0AppWebhookCreateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppWebhookCreatedResponseModel;  }> {
+    public async outgoingWebhookCreate (appSlug: string, appWebhookCreateParams: V0AppWebhookCreateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppWebhookCreatedResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/outgoing-webhooks'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -162,7 +162,7 @@ export class OutgoingWebhookApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppWebhookCreatedResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppWebhookCreatedResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -184,7 +184,7 @@ export class OutgoingWebhookApi {
      * @param appSlug App slug
      * @param appWebhookSlug App webhook slug
      */
-    public async outgoingWebhookDelete (appSlug: string, appWebhookSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppWebhookDeletedResponseModel;  }> {
+    public async outgoingWebhookDelete (appSlug: string, appWebhookSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppWebhookDeletedResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'app-webhook-slug' + '}', encodeURIComponent(String(appWebhookSlug)));
@@ -241,7 +241,7 @@ export class OutgoingWebhookApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppWebhookDeletedResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppWebhookDeletedResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -264,7 +264,7 @@ export class OutgoingWebhookApi {
      * @param next Slug of the first webhook in the response
      * @param limit Max number of elements per page (default: 50)
      */
-    public async outgoingWebhookList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppWebhookListResponseModel;  }> {
+    public async outgoingWebhookList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppWebhookListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/outgoing-webhooks'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -326,7 +326,7 @@ export class OutgoingWebhookApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppWebhookListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppWebhookListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -349,7 +349,7 @@ export class OutgoingWebhookApi {
      * @param appWebhookSlug App webhook slug
      * @param appWebhookUpdateParams App webhook update params
      */
-    public async outgoingWebhookUpdate (appSlug: string, appWebhookSlug: string, appWebhookUpdateParams: V0AppWebhookUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppWebhookResponseModel;  }> {
+    public async outgoingWebhookUpdate (appSlug: string, appWebhookSlug: string, appWebhookUpdateParams: V0AppWebhookUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppWebhookResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'app-webhook-slug' + '}', encodeURIComponent(String(appWebhookSlug)));
@@ -412,7 +412,7 @@ export class OutgoingWebhookApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppWebhookResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppWebhookResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

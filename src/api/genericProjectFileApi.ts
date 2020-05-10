@@ -100,7 +100,7 @@ export class GenericProjectFileApi {
      * @param appSlug App slug
      * @param genericProjectFileSlug Generic project file slug
      */
-    public async genericProjectFileConfirm (appSlug: string, genericProjectFileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }> {
+    public async genericProjectFileConfirm (appSlug: string, genericProjectFileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/generic-project-files/{generic-project-file-slug}/uploaded'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'generic-project-file-slug' + '}', encodeURIComponent(String(genericProjectFileSlug)));
@@ -157,7 +157,7 @@ export class GenericProjectFileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -179,7 +179,7 @@ export class GenericProjectFileApi {
      * @param appSlug App slug
      * @param genericProjectFileSlug Generic project file slug
      */
-    public async genericProjectFileDelete (appSlug: string, genericProjectFileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }> {
+    public async genericProjectFileDelete (appSlug: string, genericProjectFileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/generic-project-files/{generic-project-file-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'generic-project-file-slug' + '}', encodeURIComponent(String(genericProjectFileSlug)));
@@ -236,7 +236,7 @@ export class GenericProjectFileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -259,7 +259,7 @@ export class GenericProjectFileApi {
      * @param next Slug of the first generic project file in the response
      * @param limit Max number of build certificates per page is 50.
      */
-    public async genericProjectFileList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageListResponseModel;  }> {
+    public async genericProjectFileList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/generic-project-files'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -321,7 +321,7 @@ export class GenericProjectFileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -343,7 +343,7 @@ export class GenericProjectFileApi {
      * @param appSlug App slug
      * @param genericProjectFileSlug Generic project file slug
      */
-    public async genericProjectFileShow (appSlug: string, genericProjectFileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }> {
+    public async genericProjectFileShow (appSlug: string, genericProjectFileSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/generic-project-files/{generic-project-file-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'generic-project-file-slug' + '}', encodeURIComponent(String(genericProjectFileSlug)));
@@ -400,7 +400,7 @@ export class GenericProjectFileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -423,7 +423,7 @@ export class GenericProjectFileApi {
      * @param genericProjectFileSlug Generic project file slug
      * @param genericProjectFile Generic project file parameters
      */
-    public async genericProjectFileUpdate (appSlug: string, genericProjectFileSlug: string, genericProjectFile: V0ProjectFileStorageDocumentUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }> {
+    public async genericProjectFileUpdate (appSlug: string, genericProjectFileSlug: string, genericProjectFile: V0ProjectFileStorageDocumentUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/generic-project-files/{generic-project-file-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'generic-project-file-slug' + '}', encodeURIComponent(String(genericProjectFileSlug)));
@@ -486,7 +486,7 @@ export class GenericProjectFileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -508,7 +508,7 @@ export class GenericProjectFileApi {
      * @param appSlug App slug
      * @param genericProjectFile Generic project file parameters
      */
-    public async genericProjectFilesCreate (appSlug: string, genericProjectFile: V0ProjectFileStorageUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }> {
+    public async genericProjectFilesCreate (appSlug: string, genericProjectFile: V0ProjectFileStorageUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/generic-project-files'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -565,7 +565,7 @@ export class GenericProjectFileApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0ProjectFileStorageResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

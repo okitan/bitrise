@@ -100,7 +100,7 @@ export class BuildCertificateApi {
      * @param appSlug App slug
      * @param buildCertificateSlug Build certificate slug
      */
-    public async buildCertificateConfirm (appSlug: string, buildCertificateSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }> {
+    public async buildCertificateConfirm (appSlug: string, buildCertificateSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/build-certificates/{build-certificate-slug}/uploaded'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-certificate-slug' + '}', encodeURIComponent(String(buildCertificateSlug)));
@@ -157,7 +157,7 @@ export class BuildCertificateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -179,7 +179,7 @@ export class BuildCertificateApi {
      * @param appSlug App slug
      * @param buildCertificate Build certificate parameters such as file name and its file size
      */
-    public async buildCertificateCreate (appSlug: string, buildCertificate: V0BuildCertificateUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }> {
+    public async buildCertificateCreate (appSlug: string, buildCertificate: V0BuildCertificateUploadParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/build-certificates'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -236,7 +236,7 @@ export class BuildCertificateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -258,7 +258,7 @@ export class BuildCertificateApi {
      * @param appSlug App slug
      * @param buildCertificateSlug Build certificate slug
      */
-    public async buildCertificateDelete (appSlug: string, buildCertificateSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }> {
+    public async buildCertificateDelete (appSlug: string, buildCertificateSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/build-certificates/{build-certificate-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-certificate-slug' + '}', encodeURIComponent(String(buildCertificateSlug)));
@@ -315,7 +315,7 @@ export class BuildCertificateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -338,7 +338,7 @@ export class BuildCertificateApi {
      * @param next Slug of the first build certificate in the response
      * @param limit Max number of build certificates per page is 50.
      */
-    public async buildCertificateList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildCertificateListResponseModel;  }> {
+    public async buildCertificateList (appSlug: string, next?: string, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildCertificateListResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/build-certificates'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)));
         let localVarQueryParameters: any = {};
@@ -400,7 +400,7 @@ export class BuildCertificateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildCertificateListResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildCertificateListResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -422,7 +422,7 @@ export class BuildCertificateApi {
      * @param appSlug App slug
      * @param buildCertificateSlug Build certificate slug
      */
-    public async buildCertificateShow (appSlug: string, buildCertificateSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }> {
+    public async buildCertificateShow (appSlug: string, buildCertificateSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/build-certificates/{build-certificate-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-certificate-slug' + '}', encodeURIComponent(String(buildCertificateSlug)));
@@ -479,7 +479,7 @@ export class BuildCertificateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -502,7 +502,7 @@ export class BuildCertificateApi {
      * @param buildCertificateSlug Build certificate slug
      * @param buildCertificate Build certificate parameters
      */
-    public async buildCertificateUpdate (appSlug: string, buildCertificateSlug: string, buildCertificate: V0BuildCertificateUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }> {
+    public async buildCertificateUpdate (appSlug: string, buildCertificateSlug: string, buildCertificate: V0BuildCertificateUpdateParams, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }> {
         const localVarPath = this.basePath + '/apps/{app-slug}/build-certificates/{build-certificate-slug}'
             .replace('{' + 'app-slug' + '}', encodeURIComponent(String(appSlug)))
             .replace('{' + 'build-certificate-slug' + '}', encodeURIComponent(String(buildCertificateSlug)));
@@ -565,7 +565,7 @@ export class BuildCertificateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0BuildCertificateResponseModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

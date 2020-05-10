@@ -94,7 +94,7 @@ export class AppleApiCredentialsApi {
      * @summary List Apple API credentials for a specific user
      * @param userSlug User slug
      */
-    public async appleApiCredentialList (userSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: V0AppleAPICredentialsListResponse;  }> {
+    public async appleApiCredentialList (userSlug: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: V0AppleAPICredentialsListResponse;  }> {
         const localVarPath = this.basePath + '/users/{user-slug}/apple-api-credentials'
             .replace('{' + 'user-slug' + '}', encodeURIComponent(String(userSlug)));
         let localVarQueryParameters: any = {};
@@ -145,7 +145,7 @@ export class AppleApiCredentialsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: V0AppleAPICredentialsListResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: V0AppleAPICredentialsListResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
